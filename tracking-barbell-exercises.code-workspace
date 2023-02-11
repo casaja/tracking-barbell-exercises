@@ -4,5 +4,9 @@
       "path": "."
     }
   ],
-  "settings": {}
+  "settings": {
+    "python.formatting.provider": "black",
+    "editor.formatOnSave": true,
+    "jupyter.sendSelectionToInteractiveWindow": true
+  }
 }
