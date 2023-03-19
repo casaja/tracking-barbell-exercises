@@ -63,7 +63,13 @@ plt.legend()
 # Compare participants
 # --------------------------------------------------------------
 
+participant_df = df.query("label == 'bench'").sort_values("participant").reset_index()
 
+fig, ax = plt.subplots()
+participant_df.groupby(["participant"])["acc_y"].plot()
+ax.set_ylabel("acc_y")
+ax.set_xlabel("samples")
+plt.legend()
 # --------------------------------------------------------------
 # Plot multiple axis
 # --------------------------------------------------------------
